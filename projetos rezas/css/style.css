@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+/* Se as fontes NÃO estiverem sendo carregadas no <head> do HTML, descomente a linha abaixo:
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+*/
+
+:root {
+    /* === CORES PRINCIPAIS (Identidade e Destaques) === */
+    --cor-primaria: #1B3B2B;       /* Verde Mata Profundo: Transmite a energia das folhas sagradas e da floresta */
+    --cor-secundaria: #8C2D19;     /* Vermelho Terracota/Jurema: Representa a força da terra, do sangue e dos rituais */
+    --cor-destaque: #D4AF37;       /* Ouro Místico / Chama: Tonalidade que remete à luz da vela, ao axé e ao fogo */
+
+    /* === CORES DE APOIO E AMBIENTE === */
+    --cor-fundo: #F4EEDC;          /* Bege Pergaminho / Linho: Fundo suave, acolhedor e com toque artesanal */
+    --cor-fundo-escuro: #0F1F17;   /* Verde Meia-Noite: Ideal para seções de contraste ou modo escuro */
+    --cor-texto-principal: #2C221E;/* Marrom Espresso: Excelente legibilidade sem o contraste agressivo do preto puro */
+    --cor-texto-secundario: #5A4A42;/* Marrom Avelã: Perfeito para legendas, subtítulos e textos de apoio */
+    --cor-superficie: #FFFFFF;     /* Branco Puro / Cartão: Para cards, caixas e elementos destacados */
+
+    /* === TIPOGRAFIA === */
+    --fonte-principal: 'Cinzel', serif;                  /* Títulos e elementos de destaque (toque clássico e cerimonial) */
+    --fonte-secundaria: 'Lora', serif;                   /* Subtítulos e citações (elegante, orgânica e legível) */
+    --fonte-geral: 'Open Sans', sans-serif;              /* Corpo de texto geral (máxima legibilidade para leitura fluida) */
+}
+
+/* ===== Configurações gerais ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-geral);
+    color: var(--cor-texto-principal);
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    font-family: var(--fonte-secundaria);
+}
+
+/* Estilo de "botão" apenas para os links dos menus */
+#nav-header a,
+#nav-main a {
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    font-family: var(--fonte-principal);
+    font-size: 1.5em;
+    padding: 20px;
+    color: var(--cor-texto-principal);
+}
+
+.topo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topo span {
+    color: var(--cor-primaria);
+    padding: 30px;
+    transition: all 0.3s;
+}
+
+.topo span:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ===== Cabeçalho ===== */
+header #nav-header ul {
+    display: flex;
+    gap: 10px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header #nav-header a {
+    flex: auto;
+    transition: all 0.3s;
+}
+
+header #nav-header a:hover,
+header #nav-header a:focus-visible {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
+}
+
+header #logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #logo img {
+    width: 400px;
+    max-width: 100%;
+}
+
+header #texto-header {
+    text-align: center;
+}
+
+header #texto-header .destaque-header {
+    color: var(--cor-secundaria);
+}
+
+/* ===== Conteúdo principal ===== */
+#container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'nav-left'
+        'principal';
+    justify-content: center;
+}
+
+#nav-main {
+    grid-area: nav-left;
+}
+
+#nav-main ul {
+    display: flex;
+    gap: 20px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-main a {
+    flex: auto;
+    border: 1px solid var(--cor-secundaria);
+    transition: all 0.3s;
+}
+
+#nav-main a:hover,
+#nav-main a:focus-visible {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
+}
+
+/* ===== Texto principal ===== */
+#container-principal {
+    grid-area: principal;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    flex-flow: column;
+}
+
+#container-principal h1 {
+    text-align: center;
+}
+
+.texto {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.455);
+}
+
+.texto h2 {
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+.texto p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+    color: var(--cor-superficie);
+    font-style: italic;
+}
+
+/* ===== Media Queries ===== */
+@media screen and (min-width: 768px) {
+    header #nav-header ul {
+        justify-content: flex-end;
+    }
+
+    #nav-main ul {
+        flex-flow: row wrap;
+    }
+
+    #container-principal {
+        max-width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header #logo img {
+        width: 500px;
+    }
+
+    #container {
+        max-width: 1300px;
+        margin: 0 auto;
+        grid-template-columns: 220px 1fr;
+        grid-template-areas: 'nav-left principal';
+    }
+
+    #nav-main {
+        margin-top: 90px;
+    }
+
+    #nav-main ul {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #nav-main ul li {
+        width: 100%;
+    }
+
+    #nav-main a {
+        border: none;
+        width: 100%;
+    }
+
+    #nav-main a:active {
+        background-color: var(--cor-primaria);
+        color: var(--cor-destaque);
+    }
+}

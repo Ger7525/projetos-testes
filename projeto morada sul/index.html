@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <title>GS interactive | 🏢 Residêncial Morada Sul</title>
+</head>
+<body class="pagina-login">
+   <div id="container-login">
+      <h1>🏢 Residêncial Morada Sul</h1>
+        <h2> Acesso ao Sistema</h2>
+        <form onsubmit="iniciarSessao(event)">
+            <div class="formulario-de-entrada">
+                <label for="selectUsuarioLogin">Colaborador:</label>
+                <select id="selectUsuarioLogin" required>
+                    <option value="">-- Selecione seu nome --</option>
+                    <option value="Milton Mendes">Milton Mendes (Porteiro)</option>
+                    <option value="Heleno">Heleno (Porteiro)</option>
+                    <option value="José Guilherme">José Guimerme (Porteiro)</option>
+                    <option value="Damião">Damião (Porteiro)</option>
+                  </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+        <footer class="logo-gs">
+          <img src="imagem/logo-azul-removebg-preview-removebg-preview.png" alt="">
+        </footer>
+    </div>
+</body>
+</html>

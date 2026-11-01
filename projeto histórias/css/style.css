@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+========================================================================== */
+
+:root {
+    /* === 1. PALETA DE CORES PRINCIPAL & SECUNDÁRIA === */
+    --marrom-profundo: #5A3218;
+    --marrom-medio: #7A4A28;
+
+    --dourado: #C9953D;
+    --dourado-claro: #E1B968;
+
+    --rose: #D98978;
+    --rose-claro: #EBA99D;
+
+    /* === 2. FUNDOS E SUPERFÍCIES === */
+    --creme: #FFF9F3;
+    --creme-rose: #F8EDE5;
+    --branco: #FFFFFF;
+
+    /* === 3. TEXTOS E BORDAS === */
+    --texto: #3E281C;
+    --borda: rgba(201, 149, 61, 0.35);
+
+    /* === 4. TIPOGRAFIA === */
+    --font-text: 'Badaboom BB', sans-serif;
+
+    /* === 5. SOMBRAS E EFEITOS (BÔNUS) === */
+    --sombra-suave: 0 4px 12px rgba(94, 50, 24, 0.08);
+    --sombra-card: 0 8px 24px rgba(201, 149, 61, 0.15);
+
+    /* === 6. TRANSIÇÕES E ARREDONDAMENTOS === */
+    --transicao-padrao: all 0.3s ease;
+    --raio-borda: 12px;
+}
+/*configurações gerais*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background-color:  #FFF9F3;
+   color:  #2C2C2C;
+   line-height: 1.8;
+   font-size: 1em;
+   font-family: var(--font-text);
+}
+header{
+   max-width:100%;
+   height: 300px;
+   margin: 0 auto;
+   background: url(../img/bg-header.jpg) no-repeat left top;
+   background-size: cover;
+   
+   
+}
+ul, a{
+   text-decoration: none;
+   list-style: none;
+   color:#5A3218;
+   font-weight: bold;
+}
+h1{
+   padding: 20px;
+   font-family: var(--font-text);
+   font-size: 1.5em;
+   text-align: center;
+   color: #7A4A28;
+   
+}
+/*menu*/
+#nav-menu{
+   background-color: #F8EDE5;
+   border: 1px solid  rgba(201, 149, 61, 0.35);
+   border-radius: 5px;
+   margin: 10px;
+   padding: 10px;
+   box-shadow:0 8px 24px rgba(201, 149, 61, 0.15) ;
+}
+#nav-menu ul{
+   display: flex;
+   gap: 10px;
+   justify-content: space-around;
+   align-items: center;
+   align-content: center;
+}
+#nav-menu a{
+   padding: 8px 16px;
+   border-radius: 5px;
+   font-weight: bold;
+   transition:all 0.3s ease ;
+
+}
+#nav-menu a:hover{
+   background-color:#D98978;
+   color: #FFFFFF;
+}
+/*destaque*/
+#inicio .destaque{ background-color:#D98978;color:#FFFFFF;}
+#quem-somos .destaque{ background-color:#D98978;color:#FFFFFF;}
+#ideais .destaque{ background-color:#D98978;color:#FFFFFF;}
+#contato .destaque{ background-color:#D98978;color:#FFFFFF;}
+
+#container{
+   width: 95%;
+   margin: 0 auto;
+
+}
+
+/*rodapé*/
+footer figure{
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   border-top: 1px solid rgba(201, 149, 61, 0.35);
+   margin-top: 20px;
+}
+footer figure img{
+   width:150px;
+}
+footer figure figcaption{
+   color: #D98978;
+   padding-bottom: 20px;
+}
+
